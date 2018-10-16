@@ -7,6 +7,7 @@ It offers them a menu so that they can choose the option.
  Contact: soraya_maqueda@hotmail.com
  */
 #include <stdio.h>
+#include <ctype.h>
 
 //Function to clear the input buffer.
 void clear (void) {
@@ -99,7 +100,7 @@ int main() {
         clear();
         scanf("%c", &option);
 
-            switch (option){
+            switch ((char) toupper(option)){
                 case 'A':
                     printf("The sum of the numbers is %lf", sum(num,i));
                     break;
